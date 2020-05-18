@@ -11,6 +11,8 @@ protected:
 	typedef std::function<R(Arg...)> Fun;
 	typedef std::vector<Fun> Functions;
 public:
+	TriangleFunctor() {}
+	TriangleFunctor(const std::initializer_list<Fun>& In):F(In.begin(),In.end()){}
 	bool Push(const Fun& Fu) {
 		F.push_back(Fu);
 		return true;
