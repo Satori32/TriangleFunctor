@@ -6,7 +6,7 @@
 //triangle but not the count three.
 
 template<class R,class... Arg>
-class TriangleFuncter {
+class TriangleFunctor {
 protected:
 	typedef std::function<R(Arg...)> Fun;
 	typedef std::vector<Fun> Functions;
