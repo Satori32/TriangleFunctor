@@ -9,7 +9,7 @@ bool F2(int A) { return A % 129; }
 
 int main() {
 
-	TriangleFunctor<bool, int> TF = {F1<bool,int>,F2};
+	TriangleFunctor<bool, int> TF = {F1<bool,int>,F2,[](int A)->bool {return A % 17; }};
 
 	TF.Push([](int A)->bool {return A % 16; });
 	TF.Push([](int A)->bool {return A % 3; });
